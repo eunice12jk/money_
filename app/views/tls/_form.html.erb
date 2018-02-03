@@ -1,0 +1,29 @@
+<%= form_for(@tl) do |f| %>
+  <% if @tl.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tl.errors.count, "error") %> prohibited this tl from being saved:</h2>
+
+      <ul>
+      <% @tl.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :ssdc_no %><br>
+    <%= f.number_field :ssdc_no %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

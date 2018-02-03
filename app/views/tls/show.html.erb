@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @tl.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @tl.last_name %>
+</p>
+
+<p>
+  <strong>Ssdc no:</strong>
+  <%= @tl.ssdc_no %>
+</p>
+
+<%= link_to 'Edit', edit_tl_path(@tl) %> |
+<%= link_to 'Back', tls_path %>
